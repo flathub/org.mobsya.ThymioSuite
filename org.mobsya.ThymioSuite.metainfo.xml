@@ -7,7 +7,7 @@
     <summary>Accessing Thymio's programming interfaces easily</summary>
     <developer_name>Mobsya</developer_name>
     <description>
-        <p> Thymio Suite will allow you to choose easily between the different programming interfaces you can use to program a Thymio educational robot. The different interfaces available are:</p>
+        <p> Thymio Suite allows you to choose easily between the different programming interfaces you can use to program a Thymio educational robot. The different interfaces available are:</p>
         <ul>
             <li>VPL (Visual Programming Language)</li>
             <li>Blockly</li>

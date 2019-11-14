@@ -91,7 +91,7 @@
                 {
                     "type": "git",
                     "url" : "https://github.com/Mobsya/aseba",
-                    "commit" : "0639387e954b6a143b13308e19d495deda84ef7c"
+                    "commit" : "2d715d52a94318df8ba267fc2e9012c35c784b6c"
                 },
                 {
                     "type": "archive",

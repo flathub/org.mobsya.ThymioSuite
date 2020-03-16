@@ -22,7 +22,7 @@
 
     <url type="homepage">https://www.thymio.org</url>
     <url type="bugtracker">https://github.com/Mobsya/aseba/issues</url>
-    <url type="help">https://www.thymio.org/help/</url>
+    <url type="help">https://www.thymio.org/help/linux-installation/</url>
 
     <update_contact>support@mobsya.org</update_contact>
 
@@ -43,7 +43,7 @@
     </screenshots>
 
     <releases>
-        <release version="2.0.0" date="2019-10-10"/>
+        <release version="2.0.0" date="2020-03-19"/>
     </releases>
 
 </component>

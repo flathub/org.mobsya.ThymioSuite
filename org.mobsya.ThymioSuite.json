@@ -12,6 +12,7 @@
         "--system-talk-name=org.freedesktop.Avahi",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--env=TMPDIR=/var/tmp"
+		"--filesystem=home"
     ],
     "command": "thymio-launcher",
     "modules": [

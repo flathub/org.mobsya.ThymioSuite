@@ -91,7 +91,7 @@
                 {
                     "type": "git",
                     "url" : "https://github.com/Mobsya/aseba",
-                    "commit" : "5db17a18581ed760ee94f4e28ee1ee761a2f5320"
+                    "commit" : "6057d4ac416131fe273274aef0753ed8def830d5"
                 },
                 {
                     "type": "archive",
@@ -103,6 +103,12 @@
                     "type": "archive",
                     "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20200505.1/scratch-gui.tar.gz",
                     "sha256": "3a08716ef8d05c25b9997f719c56e107ec9a39f75067bb4f385040b597d564fe",
+                    "strip-components": 0
+                },
+				{
+                    "type": "archive",
+                    "url": "https://github.com/Mobsya/ci-data/releases/download/data/vpl3-thymio-suite.tar.gz",
+                    "sha256": "4f7b217f4bd5e850b6aff52f2695b37ff5c700bad7f73cc617619a5b839b9856",
                     "strip-components": 0
                 },
                 {

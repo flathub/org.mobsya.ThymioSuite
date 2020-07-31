@@ -10,6 +10,7 @@
         <p> Thymio Suite allows you to choose easily between the different programming interfaces you can use to program a Thymio educational robot. The different interfaces available are:</p>
         <ul>
             <li>VPL (Visual Programming Language)</li>
+			<li>VPL3</li>
             <li>Blockly</li>
             <li>Scratch</li>
             <li>Aseba Studio</li>
@@ -43,7 +44,7 @@
     </screenshots>
 
     <releases>
-        <release version="2.0.3" date="2020-05-14"/>
+        <release version="2.1.0" date="2020-07-31"/>
     </releases>
 
 </component>

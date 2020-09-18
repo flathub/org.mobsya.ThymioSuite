@@ -22,7 +22,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/lathiat/avahi",
-                    "commit" : "4a5454fdf7e012b88904c2bd5423e5ccdf2ede92"
+                    "commit" : "17d30f5ad638619f2f4fa6529f033007a4ddb989"
                 }
             ],
             "buildsystem" : "autotools",
@@ -91,7 +91,7 @@
                 {
                     "type": "git",
                     "url" : "https://github.com/Mobsya/aseba",
-                    "commit" : "9cf577cde88d0014691d364bf252016296c42760"
+                    "commit" : "b53de0cc7ba30c99773e31909b504441e6370c82"
                 },
                 {
                     "type": "archive",
@@ -101,14 +101,14 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20200505.1/scratch-gui.tar.gz",
-                    "sha256": "3a08716ef8d05c25b9997f719c56e107ec9a39f75067bb4f385040b597d564fe",
+                    "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20200827.1/scratch-gui.tar.gz",
+                    "sha256": "7fe3599c9c166b72fd46aadea20ff909f3cd01bd548eb1db6ddfebda942a83d3",
                     "strip-components": 0
                 },
 				{
                     "type": "archive",
                     "url": "https://github.com/Mobsya/ci-data/releases/download/data/vpl3-thymio-suite.tar.gz",
-                    "sha256": "978704f83b073c2aaf36f2352e2bca60ccf1342a9f05a34abc9b481835390ddd",
+                    "sha256": "498038eab3725a06cd15d25c7df2cafb5f32e1207f0f1c8d13c3bf05c7372f32",
                     "strip-components": 0
                 },
                 {

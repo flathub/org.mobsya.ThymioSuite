@@ -91,7 +91,7 @@
                 {
                     "type": "git",
                     "url" : "https://github.com/Mobsya/aseba",
-                    "commit" : "d3f7d4ac9d2f5b56f82ac4cf284a2256b18c2bc74"
+                    "commit" : "c563a398cf7db7a00083946f715cc4f064183552"
                 },
                 {
                     "type": "archive",
@@ -108,7 +108,7 @@
 				{
                     "type": "archive",
                     "url": "https://github.com/Mobsya/ci-data/releases/download/data/vpl3-thymio-suite.tar.gz",
-                    "sha256": "aa00de26b873c604eeb077ff492dfc3a8a6cfe3eb6b9f26e785fa09fae4bda04",
+                    "sha256": "6cba8188b3f87927f5026646b80506566cdcaa49ae36080ce0ae404ed40b77de",
                     "strip-components": 0
                 },
                 {

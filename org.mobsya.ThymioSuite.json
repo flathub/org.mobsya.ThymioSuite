@@ -2,7 +2,9 @@
     "app-id": "org.mobsya.ThymioSuite",
     "runtime": "org.kde.Platform",
     "sdk": "org.kde.Sdk",
-    "runtime-version": "5.12",
+    "runtime-version": "5.15",
+    "base": "io.qt.qtwebengine.BaseApp",
+    "base-version": "5.15",
     "finish-args": [
         "--socket=x11",
         "--socket=wayland",
@@ -22,7 +24,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/lathiat/avahi",
-                    "commit" : "17d30f5ad638619f2f4fa6529f033007a4ddb989"
+                    "commit" : "f060abee2807c943821d88839c013ce15db17b58"
                 }
             ],
             "buildsystem" : "autotools",
@@ -51,8 +53,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url":  "http://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.gz",
-                    "sha256": "9995e192e68528793755692917f9eb6422f3052a53c5e13ba278a228af6c7acf"
+                    "url":  "https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.bz2",
+                    "sha256": "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
                 }
             ],
             "buildsystem": "simple",
@@ -108,7 +110,7 @@
 				{
                     "type": "archive",
                     "url": "https://github.com/Mobsya/ci-data/releases/download/data/vpl3-thymio-suite.tar.gz",
-                    "sha256": "6cba8188b3f87927f5026646b80506566cdcaa49ae36080ce0ae404ed40b77de",
+                    "sha256": "70792d0ceb023e721d580955d73e7b5348a62fdaa042badf94c09cff4efc3210",
                     "strip-components": 0
                 },
                 {

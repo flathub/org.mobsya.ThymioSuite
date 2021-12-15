@@ -105,12 +105,14 @@
                     "type": "archive",
                     "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20210908.1/scratch-gui.tar.gz",
                     "sha256": "09defa4cc5475132151860a7faa6dd88468b63aa17741a1b3207401a862a3674",
+
                     "strip-components": 0
                 },
 				{
                     "type": "archive",
                     "url": "https://github.com/Mobsya/vpl-web/releases/download/v20211130.2/vpl3-thymio-suite.tar.gz",
                     "sha256": "e8ceeeea6dddb71b4c3592678ff22552726e3693c4796d0c4b51d10e00abe636",
+
                     "strip-components": 0
                 },
                 {

@@ -1,128 +1,134 @@
 {
-    "app-id": "org.mobsya.ThymioSuite",
-    "runtime": "org.kde.Platform",
-    "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "5.15",
-    "sdk": "org.kde.Sdk",
-    "runtime-version": "5.15",
-    "finish-args": [
-        "--socket=x11",
-        "--socket=wayland",
-        "--share=network",
-        "--device=all",
-        "--share=ipc",
-        "--system-talk-name=org.freedesktop.Avahi",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--env=TMPDIR=/var/tmp",
-		"--filesystem=home"
-    ],
-    "command": "thymio-launcher",
-    "modules": [
+  "app-id": "org.mobsya.ThymioSuite",
+  "runtime": "org.kde.Platform",
+  "sdk": "org.kde.Sdk",
+  "runtime-version": "5.12",
+  "finish-args": [
+    "--socket=x11",
+    "--socket=wayland",
+    "--share=network",
+    "--device=all",
+    "--share=ipc",
+    "--system-talk-name=org.freedesktop.Avahi",
+    "--talk-name=org.kde.StatusNotifierWatcher",
+    "--env=TMPDIR=/var/tmp",
+    "--filesystem=home"
+  ],
+  "command": "thymio-launcher",
+  "modules": [
+    {
+      "name": "avahi",
+      "sources": [
         {
-            "name": "avahi",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/lathiat/avahi",
-                    "commit" : "17d30f5ad638619f2f4fa6529f033007a4ddb989"
-                }
-            ],
-            "buildsystem" : "autotools",
-            "config-opts": [
-                "--with-distro=none",
-                "--disable-qt4",
-                "--disable-gtk3",
-                "--disable-gtk",
-                "--disable-mono",
-                "--disable-autoipd",
-                "--disable-python",
-                "--disable-doxygen-doc",
-                "--enable-compat-libdns_sd",
-                "--disable-gdbm",
-                "--disable-libdaemon",
-                "--disable-libevent",
-                "--disable-manpages",
-                "--with-systemdsystemunitdir=/app/lib/systemd"
-            ],
-            "cleanup": [
-                "/bin", "/include", "*.a", "/lib/pkgconfig", "/lib/avahi",  "/lib/girepository-1.0"
-            ]
-        },
-        {
-            "name": "boost",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url":  "https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.gz",
-                    "sha256": "9995e192e68528793755692917f9eb6422f3052a53c5e13ba278a228af6c7acf"
-                }
-            ],
-            "buildsystem": "simple",
-            "build-commands": [
-                "./bootstrap.sh",
-                "./b2 install --prefix=/app/ variant=release link=static threading=multi --with-filesystem --with-atomic --with-thread --with-chrono --with-system --with-date_time --with-regex --with-serialization --with-program_options -j $FLATPAK_BUILDER_N_JOBS"
-            ],
-            "cleanup": [
-                "/lib/", "/lib/debug", "/include", ""
-            ]
-        },
-        {
-            "name": "ThymioSuite",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DFLAT_PACK_BUILD=ON",
-                "-DBOOST_ROOT=/app",
-                "-DBOOST_LIBRARYDIR=/app/lib",
-                "-DBOOST_INCLUDEDIR=/app/include",
-                "-DBoost_DETAILED_FAILURE_MSG=ON"
-            ],
-            "post-install": [
-                "install -D --target-directory /app/share/mobsya/Playground/  aseba/targets/playground/examples/*",
-                "install -D --target-directory /app/share/metainfo/ org.mobsya.ThymioSuite.metainfo.xml"
-            ],
-            "cleanup": [
-                "/bin/flatc",
-                "*.a",
-                "/lib/cmake",
-                "/include",
-                "/share/enki",
-                "/share/icons/scalable"
-            ],
-            "sources": [
-              {
-                "type": "git",
-                "url": "https://github.com/Mobsya/aseba",
-                "commit": "7ea595b6a463aeb0ef30440efe762c336d50e0c6"
-              },
-                {
-                    "type": "archive",
-                     "url": "https://github.com/Mobsya/thymio-blockly-standalone/releases/download/v20210908.3/thymio-blockly.tar.gz",
-                    "sha256": "4975d9d9ddd49c8c0ec9c6862851e2b4498c4c64e471cd840d9e4c02acb66ed6",
-                    "strip-components": 0
-                },
-                {
-                    "type": "archive",
-                    "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20210908.1/scratch-gui.tar.gz",
-                    "sha256": "09defa4cc5475132151860a7faa6dd88468b63aa17741a1b3207401a862a3674",
-
-                    "strip-components": 0
-                },
-				{
-                    "type": "archive",
-                    "url": "https://github.com/Mobsya/vpl-web/releases/download/v20211130.2/vpl3-thymio-suite.tar.gz",
-                    "sha256": "e8ceeeea6dddb71b4c3592678ff22552726e3693c4796d0c4b51d10e00abe636",
-
-                    "strip-components": 0
-                },
-                {
-                    "type": "file",
-                    "path": "org.mobsya.ThymioSuite.metainfo.xml"
-                }
-            ]
+          "type": "git",
+          "url": "https://github.com/lathiat/avahi",
+          "commit": "17d30f5ad638619f2f4fa6529f033007a4ddb989"
         }
-    ],
-    "build-options": {
-        "strip": true
+      ],
+      "buildsystem": "autotools",
+      "config-opts": [
+        "--with-distro=none",
+        "--disable-qt4",
+        "--disable-gtk3",
+        "--disable-gtk",
+        "--disable-mono",
+        "--disable-autoipd",
+        "--disable-python",
+        "--disable-doxygen-doc",
+        "--enable-compat-libdns_sd",
+        "--disable-gdbm",
+        "--disable-libdaemon",
+        "--disable-libevent",
+        "--disable-manpages",
+        "--with-systemdsystemunitdir=/app/lib/systemd"
+      ],
+      "cleanup": [
+        "/bin",
+        "/include",
+        "*.a",
+        "/lib/pkgconfig",
+        "/lib/avahi",
+        "/lib/girepository-1.0"
+      ]
+    },
+    {
+      "name": "boost",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.gz",
+          "sha256": "9995e192e68528793755692917f9eb6422f3052a53c5e13ba278a228af6c7acf"
+        }
+      ],
+      "buildsystem": "simple",
+      "build-commands": [
+        "./bootstrap.sh",
+        "./b2 install --prefix=/app/ variant=release link=static threading=multi --with-filesystem --with-atomic --with-thread --with-chrono --with-system --with-date_time --with-regex --with-serialization --with-program_options -j $FLATPAK_BUILDER_N_JOBS"
+      ],
+      "cleanup": [
+        "/lib/",
+        "/lib/debug",
+        "/include",
+        ""
+      ]
+    },
+    {
+      "name": "ThymioSuite",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DFLAT_PACK_BUILD=ON",
+        "-DBOOST_ROOT=/app",
+        "-DBOOST_LIBRARYDIR=/app/lib",
+        "-DBOOST_INCLUDEDIR=/app/include",
+        "-DBoost_DETAILED_FAILURE_MSG=ON"
+      ],
+      "post-install": [
+        "install -D --target-directory /app/share/mobsya/Playground/  aseba/targets/playground/examples/*",
+        "install -D --target-directory /app/share/metainfo/ org.mobsya.ThymioSuite.metainfo.xml"
+      ],
+      "cleanup": [
+        "/bin/flatc",
+        "*.a",
+        "/lib/cmake",
+        "/include",
+        "/share/enki",
+        "/share/icons/scalable"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/Mobsya/aseba",
+          "commit": "7ea595b6a463aeb0ef30440efe762c336d50e0c6"
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/Mobsya/thymio-blockly-standalone/releases/download/v20210908.3/thymio-blockly.tar.gz",
+          "sha256": "4975d9d9ddd49c8c0ec9c6862851e2b4498c4c64e471cd840d9e4c02acb66ed6",
+          "strip-components": 0
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20211129.4/scratch-gui.tar.gz",
+          "sha256": "3b8b8afdc3f42510fdf1b8adaa76c6d20f2039aa6327715f61005347841731e8",
+
+          "strip-components": 0
+        },
+        {
+          "type": "archive",
+          "url": "https://github.com/Mobsya/vpl-web/releases/download/v20211130.2/vpl3-thymio-suite.tar.gz",
+          "sha256": "e8ceeeea6dddb71b4c3592678ff22552726e3693c4796d0c4b51d10e00abe636",
+
+          "strip-components": 0
+        },
+        {
+          "type": "file",
+          "path": "org.mobsya.ThymioSuite.metainfo.xml"
+        }
+      ]
     }
+  ],
+  "build-options": {
+    "strip": true
+  }
 }

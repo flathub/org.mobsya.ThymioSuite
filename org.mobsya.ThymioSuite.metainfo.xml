@@ -14,7 +14,7 @@
             <li>Blockly</li>
             <li>Scratch</li>
             <li>Aseba Studio</li>
-        </ul><p> On top of the programming interfaces, Thymio Suite gives you access to different tools such as the Thymio Simulator, Thymio Upgrader and Wireless Thymio configurator. Thymio Suite also allows you to browse and access all Thymio robots plugged to your computer, or available in your network. You can give each robot a name that will be stored in the robot for easier identification. You can now acces robots over internet on a remote host</p>
+        </ul><p> On top of the programming interfaces, Thymio Suite gives you access to different tools such as the Thymio Simulator, Thymio Upgrader and Wireless Thymio configurator. Thymio Suite also allows you to browse and access all Thymio robots plugged to your computer, or available in your network. You can give each robot a name that will be stored in the robot for easier identification.</p>
     </description>
 
     <content_rating type="oars-1.0" />
@@ -44,7 +44,7 @@
     </screenshots>
 
     <releases>
-        <release version="2.3.2" date="2022-06-09"/>
+        <release version="2.4.0" date="2022-10-17"/>
     </releases>
 
 </component>

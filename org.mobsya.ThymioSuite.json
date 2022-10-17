@@ -101,7 +101,7 @@
         {
           "type": "git",
           "url": "https://github.com/Mobsya/aseba",
-          "commit": "75775d3a0a3d28e69f4cda69377f182cb021f6b1"
+          "commit": "57bf4771f413683f5fcc9d4dd06f6deb0f524041"
         },
         {
           "type": "archive",
@@ -111,16 +111,14 @@
         },
         {
           "type": "archive",
-          "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20220119.2/scratch-gui.tar.gz",
-          "sha256": "c115031ea5b32b914c407356c5e80f45eee44abdb5f1157ea1a826eae3e39da2",
-
+          "url": "https://github.com/Mobsya/scratch-gui/releases/download/v20220921.1/scratch-gui.tar.gz",
+          "sha256": "3662ced2a28eae9f968289bacfb434a5a5fd7bb80913d86051d7f1b9ad552297",
           "strip-components": 0
         },
         {
           "type": "archive",
-          "url": "https://github.com/Mobsya/vpl-web/releases/download/v20220307.1/vpl3-thymio-suite.tar.gz",
-          "sha256": "72b6caca0f32f046adf02ff59a90d352faff36f6429eabd6758b82a44815af94",
-
+          "url": "https://github.com/Mobsya/vpl-web/releases/download/v20221017.1/vpl3-thymio-suite.tar.gz",
+          "sha256": "699044d783cb20d902ffb8380563272600e0eee28d17a258f1ace6047a7ffedc",
           "strip-components": 0
         },
         {

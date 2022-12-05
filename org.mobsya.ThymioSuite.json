@@ -24,7 +24,7 @@
         {
           "type": "git",
           "url": "https://github.com/lathiat/avahi",
-          "commit": "17d30f5ad638619f2f4fa6529f033007a4ddb989"
+          "commit": "78225eb6a9fcdb0bb92b0e2e556321687d94c307"
         }
       ],
       "buildsystem": "autotools",
